@@ -1,0 +1,152 @@
+/*
+Style guide
+
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Cyan: hsl(179, 62%, 43%)
+- Bright Yellow: hsl(71, 73%, 54%)
+
+### Neutral
+
+- Light Gray: hsl(204, 43%, 93%)
+- Grayish Blue: hsl(218, 22%, 67%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 16px
+
+### Font
+
+- Family: [Karla](https://fonts.google.com/specimen/Karla)
+- Weights: 400, 700
+
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(204, 43%, 93%);
+  font-family: 'Karla', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+main {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.04);
+  max-width: 800px;
+  width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+
+section {
+  padding: 35px;
+}
+
+.light-cyan {
+  background-color: hsl(179, 47%, 52%);
+  color: white;
+}
+
+.cyan {
+  background-color: hsl(179, 62%, 43%);
+  color: white;
+}
+
+.row {
+  display: flex;
+}
+
+.row > section {
+  flex: 1;
+}
+
+h1 {
+  font-size: 34px;
+  color: hsl(179, 47%, 52%);
+}
+
+.yellow-text {
+  color: hsl(71, 73%, 54%);
+}
+
+p {
+  font-size: 18px;
+}
+
+.light-black {
+  color: hsl(218, 22%, 67%);
+}
+
+p.light-black {
+  margin: 7px;
+}
+
+button {
+  background-color: hsl(71, 73%, 54%);
+  color: #fff;
+  font-family: 'Karla', sans-serif;
+  font-weight: 18px;
+  padding: 20px 0;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  margin-top: 15px;
+  box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  outline: none;
+}
+
+p.faded {
+  color: hsl(179, 43%, 75%);
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+}
+
+p.faded span {
+  color: #fff;
+  font-size: 50px;
+  margin-right: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  opacity: 0.7;
+}
+
+ul li {
+  line-height: 28px;
+}
+
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column;
+  }
+}
