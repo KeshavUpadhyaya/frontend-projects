@@ -3,7 +3,8 @@ const projects = [
   'intro-component-with-signup-form',
   'base-apparel-coming-soon',
   'single-price-grid-component',
-  'ping-coming-soon-page'
+  'ping-coming-soon-page',
+  'huddle-landing-page'
 ]
 
 const list = document.getElementById('list');
