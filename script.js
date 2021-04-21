@@ -4,6 +4,7 @@ const projects = [
   'base-apparel-coming-soon',
   'single-price-grid-component',
   'ping-coming-soon-page',
+  'huddle-landing-page-simple',
   'huddle-landing-page'
 ]
 
