@@ -270,6 +270,15 @@ ul.contact {
     text-align: center;
   }
 
+  nav {
+    flex-direction: column;
+    margin: 20px 0;
+  }
+
+  nav ul li {
+    margin: 10px 20px;
+  }
+
   .flex {
     flex-direction: column;
   }
