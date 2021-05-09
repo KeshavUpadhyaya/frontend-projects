@@ -6,7 +6,8 @@ const projects = [
   'ping-coming-soon-page',
   'huddle-landing-page-simple',
   'huddle-landing-page',
-  'fylo-landing-page'
+  'fylo-landing-page',
+  'insure-landing-page'
 ]
 
 const list = document.getElementById('list');
