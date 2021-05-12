@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
-/* Linear Gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%) */
 :root {
   --Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
   --Light-Grayish-Blue: hsl(234, 14%, 74%);
@@ -10,4 +9,215 @@
 
 * {
   box-sizing: border-box;
+}
+
+body {
+  background-color: var(--Very-Light-Grayish-Blue);
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-image: url('./images/bg-top.svg');
+  background-position: top right;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  background-image: url('./images/bg-bottom.svg');
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.container {
+  width: 1200px;
+  max-width: 100%;
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: var(--Grayish-Blue);
+}
+
+.toggle-container {
+  color: var(--Light-Grayish-Blue);
+  margin-bottom: 40px;
+}
+
+.price-box {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  color: var(--Grayish-Blue);
+}
+
+.price-box .monthly {
+  display: none;
+}
+
+.show-monthly .price-box .monthly {
+  display: block;
+}
+
+.show-monthly .price-box .annually {
+  display: none;
+}
+
+.price-box.price-box-pro {
+  background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: #fff;
+  transform: scale(1.15);
+}
+
+/* Scaling the contents of the children back to a smaller size*/
+.price-box.price-box-pro > * {
+  transform: scale(0.869); /* 1/1.15 */
+}
+
+.price-box p {
+  font-size: 4em;
+  margin: 20px 0;
+  color: var(--Dark-Grayish-Blue);
+  width: 250px;
+}
+
+.price-box.price-box-pro p {
+  color: #fff;
+}
+
+.price-box h4 {
+  margin: 0;
+}
+
+.price-box ul {
+  border-top: 1px solid var(--Light-Grayish-Blue);
+  padding: 0;
+  list-style-type: none;
+  font-size: 14px;
+}
+
+.price-box ul li {
+  padding: 15px 0;
+  border-bottom: 1px solid var(--Light-Grayish-Blue);
+}
+
+.price-box.price-box-pro ul,
+.price-box.price-box-pro ul li {
+  border-color: hsl(237, 30%, 73%);
+}
+
+.price-box button {
+  font-family: inherit;
+  background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: #fff;
+  padding: 15px;
+  width: 100%;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  height: 50px;
+}
+
+.price-box button:active {
+  color: hsl(237, 63%, 64%);
+  background-image: none;
+  background-color: #fff;
+  border: 2px solid hsl(237, 63%, 64%);
+}
+
+.price-box.price-box-pro button {
+  background-image: none;
+  background-color: #fff;
+  color: hsl(237, 63%, 64%);
+}
+
+.price-box.price-box-pro button:active {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+/* Pill toggle */
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-container label {
+  background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  width: 60px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  margin: 0 15px;
+}
+
+.toggle-container label .ball {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 2.5px;
+  left: 2.5px;
+  transition: transform 0.4s ease;
+}
+
+.toggle-container label:active {
+  opacity: 0.5;
+}
+
+.toggle-container input {
+  position: absolute;
+  left: -9999999999999999px;
+}
+
+.toggle-container input:checked + label .ball {
+  transform: translateX(30px);
+}
+
+@media screen and (max-width: 930px) {
+  .flex {
+    flex-direction: column;
+  }
+
+  .price-box.price-box-pro {
+    transform: scale(1);
+  }
+  .price-box.price-box-pro > * {
+    transform: scale(1);
+  }
 }
