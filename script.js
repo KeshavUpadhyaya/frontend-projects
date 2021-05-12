@@ -13,11 +13,11 @@ const projects = [
 
 const list = document.getElementById('list');
 
-projects.forEach(project => {
+projects.forEach((project, index) => {
   const listItem = document.createElement('li');
   const link = document.createElement('a');
   link.href = `/${project}/index.html`;
-  link.innerHTML = `<p>${formatProjectName(project)}</p>`;
+  link.innerHTML = `<p>${index + 1 + '. ' + formatProjectName(project)}</p>`;
 
 
   const img = document.createElement('img');
