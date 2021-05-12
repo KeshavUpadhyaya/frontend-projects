@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: rgb(248, 239, 239);
+  background-color: rgb(229, 239, 248);
 }
 
 section {
@@ -45,7 +45,10 @@ ul li a img {
   height: 200px;
   width: 300px;
   object-fit: cover;
+  /* margin: 0;
+  padding: 0; */
   transition: transform 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 /* pop the image when hovering over the link*/
@@ -54,7 +57,8 @@ ul li a:hover img {
 }
 
 footer {
-  background-color: rgb(136, 0, 0);
+  background-color: #000;
+  opacity: 0.7;
   position: fixed;
   color: #fff;
   bottom: 0;
