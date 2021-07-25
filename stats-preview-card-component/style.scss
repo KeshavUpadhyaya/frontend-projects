@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+// primary
+$very-dark-blue: hsl(233, 47%, 7%);
+$dark-desatureated-blue: hsl(244, 38%, 16%);
+$soft-violet: hsl(277, 64%, 61%);
+
+// neutral
+$white: hsl(0, 0%, 100%);
+$white-p: hsla(0, 0%, 100%, 0.75);
+$white-h: hsla(0, 0%, 100%, 0.6);
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  color: $white;
+}
+
+.pink-text {
+  color: $soft-violet;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: $very-dark-blue;
+  font-size: 15px;
+  color: $white;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  padding: 20px;
+}
+
+.flex {
+  display: flex;
+}
+
+main {
+  background-color: $dark-desatureated-blue;
+  max-width: 1000px;
+  width: 1000px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  // flex-wrap: wrap;
+  // height: 350px;
+}
+
+main > .container {
+  flex: 1 1 50%;
+}
+
+main > .picture {
+  flex: 1 1 50%;
+}
+
+.container {
+  // height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  // background-color: red;
+  flex-direction: column;
+  width: 80%;
+  height: 80%;
+}
+
+.picture {
+  background-image: url('./images/image-header-desktop.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+}
+
+// Using a pseudo element for overlaying the color
+.picture::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: $soft-violet;
+  opacity: 0.6;
+}
+
+.stats {
+  margin-top: 20px;
+  position: relative;
+  gap: 24px;
+}
+
+.stats p {
+  text-transform: uppercase;
+  color: $white-h;
+  font-family: 'Lexend Deca', sans-serif;
+  margin-top: 0;
+  position: relative;
+  top: -10px;
+  font-size: 0.8em;
+}
+
+p {
+  color: $white-p;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+img {
+  opacity: 0.4;
+}
+
+@media screen and (max-width: 576px) {
+  main {
+    flex-direction: column-reverse;
+    height: 1000px;
+  }
+
+  .content {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .stats {
+    flex-direction: column;
+  }
+}

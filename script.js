@@ -1,4 +1,5 @@
 const projects = [
+  'stats-preview-card-component',
   'four-card-feature-section',
   'intro-component-with-signup-form',
   'base-apparel-coming-soon',
@@ -9,7 +10,7 @@ const projects = [
   'fylo-landing-page',
   'insure-landing-page',
   'pricing-component-with-toggle'
-]
+];
 
 const list = document.getElementById('list');
 
