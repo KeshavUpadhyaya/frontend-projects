@@ -117,7 +117,7 @@ button:active {
     height: 300px;
   }
   button {
-    bottom: calc(20px);
+    bottom: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */
