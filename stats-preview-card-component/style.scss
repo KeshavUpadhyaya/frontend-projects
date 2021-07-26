@@ -92,7 +92,8 @@ main > .picture {
   top: 0;
   bottom: 0;
   background: $soft-violet;
-  opacity: 0.6;
+  // opacity: 0.6;
+  mix-blend-mode: multiply;
 }
 
 .stats {

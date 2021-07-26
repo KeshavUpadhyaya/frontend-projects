@@ -104,7 +104,7 @@ main > .picture {
   top: 0;
   bottom: 0;
   background: #aa5cdb;
-  opacity: 0.6;
+  mix-blend-mode: multiply;
 }
 
 .stats {
