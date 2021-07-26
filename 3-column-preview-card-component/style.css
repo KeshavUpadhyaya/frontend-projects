@@ -6,5 +6,118 @@
 
 body {
   margin: 0;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+h2 {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 700;
+  text-transform: uppercase;
+  color: #f2f2f2;
+}
+
+p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: small;
+}
+
+main {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 800px;
+}
+
+.sedans {
+  background-color: #e38826;
+}
+
+.sedans > button {
+  color: #e38826;
+}
+
+.sedans > button:active {
+  color: #f2f2f2;
+}
+
+.suvs {
+  background-color: #006970;
+}
+
+.suvs > button {
+  color: #006970;
+}
+
+.suvs > button:active {
+  color: #f2f2f2;
+}
+
+.luxury {
+  background-color: #004241;
+}
+
+.luxury > button {
+  color: #004241;
+}
+
+.luxury > button:active {
+  color: #f2f2f2;
+}
+
+.container > div {
+  padding: 30px;
+  height: 400px;
+  position: relative;
+}
+
+button {
+  border: none;
+  border-radius: 50px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 80px;
+}
+
+button:active {
+  background-color: transparent;
+  border: 1px solid #f2f2f2;
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    margin: 60px auto;
+  }
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 60vw;
+  }
+  .container > div {
+    height: 300px;
+  }
+  button {
+    bottom: 40px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

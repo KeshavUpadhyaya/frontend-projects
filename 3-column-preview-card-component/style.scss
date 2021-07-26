@@ -13,4 +13,107 @@ $Very-light-gray: hsl(0, 0%, 95%);
 
 body {
   margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+h2 {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 700;
+  text-transform: uppercase;
+  color: $Very-light-gray;
+}
+
+p {
+  color: $Transparent-white;
+  font-size: small;
+}
+
+main {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  max-width: 800px;
+}
+
+.sedans {
+  background-color: $bright-orange;
+
+  & > button {
+    color: $bright-orange;
+  }
+
+  & > button:active {
+    color: $Very-light-gray;
+  }
+}
+
+.suvs {
+  background-color: $Dark-cyan;
+  & > button {
+    color: $Dark-cyan;
+  }
+
+  & > button:active {
+    color: $Very-light-gray;
+  }
+}
+
+.luxury {
+  background-color: $Very-dark-cyan;
+  & > button {
+    color: $Very-dark-cyan;
+  }
+
+  & > button:active {
+    color: $Very-light-gray;
+  }
+}
+
+.container > div {
+  padding: 30px;
+  height: 400px;
+  position: relative;
+}
+
+button {
+  border: none;
+  border-radius: 50px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 80px;
+}
+
+button:active {
+  background-color: transparent;
+  border: 1px solid $Very-light-gray;
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    margin: 60px auto;
+  }
+
+  .container {
+    flex-direction: column;
+    max-width: 60vw;
+  }
+
+  .container > div {
+    height: 300px;
+  }
+
+  button {
+    bottom: 40px;
+  }
 }
