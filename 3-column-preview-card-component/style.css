@@ -114,10 +114,10 @@ button:active {
     max-width: 60vw;
   }
   .container > div {
-    height: 300px;
+    height: 400px;
   }
   button {
-    bottom: 10px;
+    bottom: 50px;
   }
 }
 /*# sourceMappingURL=style.css.map */
