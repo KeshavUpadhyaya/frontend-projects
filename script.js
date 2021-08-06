@@ -1,6 +1,7 @@
 const projects = [
   'stats-preview-card-component',
   '3-column-preview-card-component',
+  'proflie-card-component',
   'four-card-feature-section',
   'intro-component-with-signup-form',
   'base-apparel-coming-soon',
